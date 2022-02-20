@@ -1,6 +1,13 @@
+from typing import KeysView
+
 def rm_smallest(d):
-    # Your code here!
-    return 0;
+
+    if d == {}: return {}
+    
+    else:
+        key = min(d, key=d.get)
+        del d [key]
+        return d
 
 def test():
     assert 'a' in rm_smallest({'a':1,'b':-10}).keys()
